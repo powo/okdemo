@@ -17,12 +17,13 @@ def home():
     uptime = time.time() - starttime
     delay = 8 - uptime
     if delay > 0:
-        return "503 Sorry, the App needs %d more seconds to boot up" % delay, 503
+        return "503 Sorry, the App needs %d more seconds to boot up\n" % delay, 503
 
     # collect lines we want to output
     myhostname = socket.gethostname()
     myip = socket.gethostbyname(myhostname)
     s = 'Hello World! Host: %s IP: %s (uptime:%d)\n' % (myhostname, myip, uptime)
+    s += '<pre>\n'
 
 
     ##########################################################################
@@ -79,7 +80,7 @@ def home():
     ##########################################################################
     # send response
     ##########################################################################
-    return '<pre>%s</pre>' % s
+    return '%s</pre>' % s
 
 
 if __name__ == '__main__':
