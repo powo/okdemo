@@ -38,7 +38,7 @@ $ oc new-app python~https://github.com/powo/okdemo.git
 ## Create a Route
 ```bash
 $ oc create route edge --service=okdemo
-export URL="https://"`oc get route okdemo -ogo-template='{{.spec.host}}'`
+export URL=`oc get route okdemo -o go-template='https://{{.spec.host}}/'`
 ```
 Test it (leaving it running in a loop):
 ```bash
