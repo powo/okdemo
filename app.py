@@ -84,11 +84,11 @@ def home():
 
 
 if __name__ == '__main__':
-    # serve with wsgiref:
-    from wsgiref.simple_server import make_server
-    httpd = make_server('0.0.0.0', 8080, app)
-    print("Listening on 0.0.0.0:8080")
-    httpd.serve_forever()
-
     # serve with flask dev-server:
-    #app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8080)
+
+    ## serve with wsgiref:
+    #from wsgiref.simple_server import make_server
+    #httpd = make_server('0.0.0.0', 8080, app)
+    #print("Listening on 0.0.0.0:8080")
+    #httpd.serve_forever()
