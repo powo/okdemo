@@ -22,7 +22,7 @@ def home():
     # collect lines we want to output
     myhostname = socket.gethostname()
     myip = socket.gethostbyname(myhostname)
-    s = 'Hello World! Host: %s IP: %s (uptime:%d)\n' % (myhostname, myip, uptime)
+    s = 'Hallo Welt! Host: %s IP: %s (uptime:%d)\n' % (myhostname, myip, uptime)
     s += '<pre>\n'
 
 
