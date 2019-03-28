@@ -165,7 +165,6 @@ oc run -i -t mypod --image=notused --restart=Never --rm=true --overrides='
 ## save all artifacts for later reuse
 ```bash
 $ oc get all -l app=okdemo
-oc get --export {is,bc,dc,service,route}/okdemo -o yaml > okdemo-all.yaml
+oc get --export {is,bc,dc,service,route}/okdemo {secret,service,pvc,dc}/demodb -o yaml > okdemo-all.yaml
+# cleanup the YAML (remove all references to specific namespace...)
 ```
-(this is without the DB)
-
