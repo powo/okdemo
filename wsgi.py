@@ -1,4 +1,3 @@
 #!/usr/bin/env python
 
-from app import app
-application = app
+from myapp import app as application
